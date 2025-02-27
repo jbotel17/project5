@@ -3,8 +3,6 @@ import HomePage from '@/views/HomePage.vue'
 import CardDetail from './views/CardDetail.vue'
 import LoginPage from './views/LoginPage.vue'
 import SettingsPage from './views/SettingsPage.vue'
-import { useAuth } from './composables/useAuth'
-
 const { isAuthenticated } = useAuth()
 
 const routes = [
@@ -13,6 +11,7 @@ const routes = [
   { path: '/project5/login', name: 'LoginPage', component: LoginPage },
   { path: '/project5/settings', name: 'SettingsPage', meta: { requiresAuth: true }, component: SettingsPage },
 ]
+import { useAuth } from './composables/useAuth'
 
 const router = createRouter({
   history: createWebHistory(),

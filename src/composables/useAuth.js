@@ -4,6 +4,7 @@ import { firebaseApp } from './useFirebase'
 import { getAuth, signInWithEmailAndPassword, signOut,} from 'firebase/auth'
 import { useAuth as firebaseAuth } from '@vueuse/firebase/useAuth'
 
+
 const auth = getAuth(firebaseApp)
 
 const { isAuthenticated, user } = firebaseAuth(auth)
